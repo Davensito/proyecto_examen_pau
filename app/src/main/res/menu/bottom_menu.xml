@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        app:showAsAction="ifRoom"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/playlist"
+        app:showAsAction="ifRoom"
+        android:title="@string/playlist"
+        android:icon="@drawable/ic_playlist"/>
+
+    <item
+        android:id="@+id/favSongs"
+        app:showAsAction="ifRoom"
+        android:title="@string/favSong"
+        android:icon="@drawable/ic_fav_songs"/>
+
+    <item
+        android:id="@+id/perfil"
+        app:showAsAction="ifRoom"
+        android:title="@string/perfil"
+        android:icon="@drawable/ic_user"/>
+
+</menu>

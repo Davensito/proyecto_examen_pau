@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/common_padding_default"
+    android:layout_margin="@dimen/common_margin_min"
+    tools:context=".activity.EditplaylistActivity">
+
+    <TextView
+        android:id="@+id/tvNewPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textEditPlaylist"
+        android:padding="@dimen/common_padding_default"
+        android:layout_margin="@dimen/common_margin_min"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvNewPlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/common_margin_min"
+        app:startIconDrawable="@drawable/ic_title"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textTitle" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilImagen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/required"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/common_margin_min"
+        app:startIconDrawable="@drawable/ic_img"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etImagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textImage"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/notRequired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notRequired"
+        app:layout_constraintStart_toStartOf="@id/tilImagen"
+        app:layout_constraintTop_toBottomOf="@+id/tilImagen"/>
+
+    <TextView
+        android:id="@+id/required"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/required"
+        app:layout_constraintStart_toStartOf="@id/tilTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/tilTitulo"/>
+
+    <Button
+        android:id="@+id/btnEditarPlaylist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notRequired"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/common_margin_min"
+        android:text="@string/done"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
